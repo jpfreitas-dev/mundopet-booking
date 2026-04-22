@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Pet</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <script src="./src/scripts/date-picker.js" defer></script>
+</head>
+
+<body>
+  <div id="app-name">
+    <img src="./src/assets/dog.svg" alt="Ícone de cachorro">
+    <span>Mundo Pet</span>
+  </div>
+
+  <div id="schedules">
+    <header>
+      <div class="title">
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
+      <div class="today-date">
+        <img src="./src/assets/calendar.svg" alt="Ícone de calendário">
+        <input type="date">
+        <img class="date-arrow" src="./src/assets/arrow-down.svg" alt="">
+      </div>
+    </header>
+    <main>
+      <section class="schedule-period">
+        <header>
+          <img src="./src/assets/morning.svg" alt="Manhã" />
+          <strong>Manhã</strong>
+          <span>09h-12h</span>
+        </header>
+        <ul id="period-morning" class="period">
+          <li class="schedule-card">
+            <div class="schedule-info">
+              <div>
+                <span class="schedule-hour">09:00</span>
+                <div class="schedule-clients">
+                  <span class="schedule-pet">Thor</span>
+                  <p class="schedule-user">/ Fernanda Costa</p>
+                </div>
+              </div>
+              <p class="schedule-service">Vacinação</p>
+            </div>
+            <button type="button" class="delete-schedule">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="schedule-period">
+        <header>
+          <img src="./src/assets/afternoon.svg" alt="Tarde" />
+          <strong>Tarde</strong>
+          <span>13h-18h</span>
+        </header>
+        <ul id="period-afternoon" class="period">
+          <li class="schedule-card">
+            <div class="schedule-info">
+              <div>
+                <span class="schedule-hour">13:00</span>
+                <div class="schedule-clients">
+                  <span class="schedule-pet">Mel</span>
+                  <p class="schedule-user">/ João Souza</p>
+                </div>
+              </div>
+              <p class="schedule-service">Corte de Unhas</p>
+            </div>
+            <button type="button" class="delete-schedule">Remover agendamento</button>
+          </li>
+          <li class="schedule-card">
+            <div class="schedule-info">
+              <div>
+                <span class="schedule-hour">14:00</span>
+                <div class="schedule-clients">
+                  <span class="schedule-pet">Bella</span>
+                  <p class="schedule-user">/ Pedro Martins</p>
+                </div>
+              </div>
+              <p class="schedule-service">Aplicação de anti-pulgas</p>
+            </div>
+            <button type="button" class="delete-schedule">Remover agendamento</button>
+          </li>
+          <li class="schedule-card">
+            <div class="schedule-info">
+              <div>
+                <span class="schedule-hour">15:00</span>
+                <div class="schedule-clients">
+                  <span class="schedule-pet">Simba</span>
+                  <p class="schedule-user">/ Juliana Rocha</p>
+                </div>
+              </div>
+              <p class="schedule-service">Tosa Higiênica</p>
+            </div>
+            <button type="button" class="delete-schedule">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="schedule-period">
+        <header>
+          <img src="./src/assets/night.svg" alt="noite" />
+          <strong>Noite</strong>
+          <span>19h-21h</span>
+        </header>
+        <ul id="period-night" class="period">
+          <li class="schedule-card">
+            <div class="schedule-info">
+              <div>
+                <span class="schedule-hour">20:00</span>
+                <div class="schedule-clients">
+                  <span class="schedule-pet">Max</span>
+                  <p class="schedule-user">/ Camila Santos</p>
+                </div>
+              </div>
+              <p class="schedule-service">Limpeza de Dentes</p>
+            </div>
+            <button type="button" class="delete-schedule">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <button id="new-schedule">Novo agendamento</button>
+  <div id="modal" class="hidden"></div>
+
+</body>
+
+</html>

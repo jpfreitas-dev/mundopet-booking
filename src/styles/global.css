@@ -65,15 +65,14 @@ button, a, input, select, textarea {
   color: inherit;
   background: none;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
+ul, ol {
+  list-style: none;
+}
 
 .hidden {
   display: none;
 }
-
-
-
-
-

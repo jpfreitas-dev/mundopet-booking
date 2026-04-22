@@ -1,0 +1,213 @@
+#schedules {
+  margin-block: .5625rem 2.5rem;
+  padding: .75rem 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &>header {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
+    & .title {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+
+      & h1 {
+        font: var(--title);
+      }
+
+      & p {
+        font: var(--ph-medium);
+        color: var(--content-secondary);
+      }
+    }
+
+    & .today-date {
+      width: 11.4375rem;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 1rem;
+      padding-right: 2.75rem;
+      border: 1px solid var(--border-primary);
+      border-radius: .75rem;
+      background-color: transparent;
+
+      & .date-arrow {
+        position: absolute;
+        right: 0.75rem;
+        pointer-events: none;
+      }
+
+      & input {
+        width: 7.7rem;
+        background: transparent;
+      }
+
+      & input::-webkit-calendar-picker-indicator {
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &>main {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
+    & .schedule-period {
+      border-radius: .625rem;
+      background-color: var(--background-tertiary);
+
+      & header {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: .75rem 1.25rem;
+        border-bottom: 1px solid var(--border-primary);
+
+        & strong {
+          flex: 1;
+          font: var(--label-large);
+          color: var(--content-primary);
+        }
+
+        & span {
+          font: var(--label-large);
+          color: var(--content-secondary);
+        }
+
+
+      }
+
+      & .period {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        padding: 1.25rem;
+        gap: .75rem;
+
+        & .schedule-card {
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+          padding: 1rem 0.75rem;
+
+          &:not(:only-child) {
+            border-bottom: 1px solid var(--border-primary);
+          }
+
+          & .schedule-info {
+            display: flex;
+            flex-direction: column;
+
+            &>div {
+              display: flex;
+              gap: 12px;
+            }
+
+            & .schedule-time {
+              font: var(--label-medium);
+              color: var(--content-primary);
+            }
+
+            & .schedule-clients {
+              display: flex;
+              gap: .25rem;
+
+              & .schedule-user {
+                font: var(--ph-medium);
+                color: var(--content-secondary);
+              }
+            }
+
+            & .schedule-service {
+              font: var(--ph-medium);
+              color: var(--content-secondary);
+            }
+          }
+
+          & button.delete-schedule {
+            color: var(--content-tertiary);
+            width: fit-content;
+            align-self: flex-end;
+
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (width > 30rem) {
+  #schedules {
+    &>header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      & .title {
+        gap: .5rem;
+      }
+    }
+
+    &>main {
+      & .schedule-period {
+        & .period {
+          & .schedule-card {
+            flex-direction: row;
+            align-items: center;
+            gap: 1.25rem;
+            justify-content: space-between;
+
+            & button.delete-schedule {
+              align-self: first baseline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width > 48rem) {
+  #schedules {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 54.375rem;
+
+    &>main {
+      & .schedule-period {
+        & .period {
+          & .schedule-card {
+            flex-direction: row;
+            align-items: center;
+            gap: 1.25rem;
+
+            & .schedule-info {
+              flex-direction: row;
+              align-items: center;
+              flex: 1;
+              gap: 1.25rem;
+
+              & .schedule-clients {
+                min-width: 18rem;
+              }
+
+              & .schedule-service {
+                flex: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
