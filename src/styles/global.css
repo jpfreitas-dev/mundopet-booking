@@ -14,7 +14,7 @@
   --content-brand: #9282fa;
 
   /* Background */
-  --background-primary: #151515;
+  --background-primary: #14151d;
   --background-secondary: #1e1e1e;
   --background-tertiary: #23242c;
   --background-brand: #9282fa;
@@ -49,4 +49,31 @@
 
   --link: 500 0.75rem/1rem var(--font-family-text);
 }
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+  font: var(--ph-medium);
+}
+
+button, a, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+
+
 
