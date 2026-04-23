@@ -1,7 +1,10 @@
-#app-name {
-  width: fit-content;
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   gap: .25rem;
+  z-index: 3;
 
   background-color: #2E2C30;
   padding: .75rem 1.25rem;

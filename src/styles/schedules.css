@@ -1,6 +1,6 @@
 #schedules {
-  margin-block: .5625rem 2.5rem;
-  padding: .75rem 1.25rem;
+  margin: 0 auto 1.5rem;
+  padding: 3.5625rem 1.25rem 0;
 
   display: flex;
   flex-direction: column;
@@ -89,7 +89,6 @@
       & .period {
         display: flex;
         flex-direction: column;
-        gap: .75rem;
         padding: 1.25rem;
         gap: .75rem;
 
@@ -98,9 +97,9 @@
           flex-direction: column;
           gap: .5rem;
           padding: 1rem 0.75rem;
-
+          
           &:not(:only-child) {
-            border-bottom: 1px solid var(--border-primary);
+            border-bottom: 1px solid var(--border-divisor);
           }
 
           & .schedule-info {
@@ -112,7 +111,7 @@
               gap: 12px;
             }
 
-            & .schedule-time {
+            & .schedule-hour {
               font: var(--label-medium);
               color: var(--content-primary);
             }
@@ -168,7 +167,7 @@
             justify-content: space-between;
 
             & button.delete-schedule {
-              align-self: first baseline;
+             align-self: first baseline;
             }
           }
         }
@@ -198,7 +197,7 @@
               gap: 1.25rem;
 
               & .schedule-clients {
-                min-width: 18rem;
+                min-width: 15rem;
               }
 
               & .schedule-service {

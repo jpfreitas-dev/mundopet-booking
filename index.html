@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <div id="app-name">
+  <div id="logo">
     <img src="./src/assets/dog.svg" alt="Ícone de cachorro">
     <span>Mundo Pet</span>
   </div>
@@ -132,8 +132,76 @@
       </section>
     </main>
   </div>
+
   <button id="new-schedule">Novo agendamento</button>
-  <div id="modal" class="hidden"></div>
+
+  <div id="modal-overlay" class="modal-overlay">
+  
+  <div class="modal-content" role="dialog" aria-labelledby="modal-title">
+    
+    <header class="modal-header">
+      <h2 id="modal-title">Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento:</p>
+    </header>
+
+    <form id="schedule-form" class="modal-form">
+      <div class="input-group">
+        <label for="tutor-name">Nome do tutor</label>
+        <div class="field-control">
+          <img src="./src/assets/user.svg" alt="">
+          <input type="text" id="tutor-name" placeholder="Helena Souza" required>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="pet-name">Nome do pet</label>
+        <div class="field-control">
+          <img src="./src/assets/pet-paw.svg" alt="">
+          <input type="text" id="pet-name" placeholder="Cheddar" required>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="phone">Telefone</label>
+        <div class="field-control">
+          <img src="./src/assets/phone.svg" alt="">
+          <input type="tel" id="phone" placeholder="(00) 0 0000-0000" required>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="service">Descrição do serviço</label>
+        <div class="field-control is-textarea">
+          <textarea type="text" id="service" placeholder="Ex: Banho e Tosa" required></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="input-group">
+          <label for="date">Data</label>
+          <div class="field-control select-control">
+            <img src="./src/assets/calendar.svg" alt="">
+            <input type="date" id="date" required>
+            <img class="date-arrow" src="./src/assets/arrow-down.svg" alt="">
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="time">Hora</label>
+          <div class="field-control select-control">
+            <img src="./src/assets/clock.svg" alt="">
+            <input type="time" id="time" min="09:00" max="21:00" step="3600" required>
+            <img class="date-arrow" src="./src/assets/arrow-down.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <footer class="modal-footer">
+        <button type="submit" class="button-primary">Finish Schedule</button>
+      </footer>
+    </form>
+    
+  </div>
+</div>
 
 </body>
 

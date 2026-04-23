@@ -21,7 +21,7 @@
   }
 }
 
-@media (width > 30rem) {
+@media (width > 48rem) {
   #new-schedule {
     position: fixed;
     right: 2rem;
