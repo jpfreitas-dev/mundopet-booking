@@ -72,7 +72,3 @@ button, a, input, select, textarea {
 ul, ol {
   list-style: none;
 }
-
-.hidden {
-  display: none;
-}
