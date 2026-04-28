@@ -44,11 +44,11 @@ export function schedulesShow({ dailySchedules }) {
 
       const pet = document.createElement("span");
       pet.classList.add("schedule-pet");
-      pet.textContent = schedule.pet;
+      pet.textContent = schedule.petName;
 
       const tutor = document.createElement("p");
       tutor.classList.add("schedule-tutor");
-      tutor.textContent = schedule.tutor;
+      tutor.textContent = `/ ${schedule.tutorName}`;  ;
 
       // clients > pet + tutor
       clients.append(pet, tutor);

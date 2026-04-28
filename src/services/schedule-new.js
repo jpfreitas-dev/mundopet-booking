@@ -13,7 +13,7 @@ export async function scheduleNew({ tutorName, petName, phone, service, date, ho
         petName,
         phone,
         service,
-        when: `${date}T${hour}:00.000Z`,
+        when: `${date}T${hour}:00.000`,
       }),
     });
 
