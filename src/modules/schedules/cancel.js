@@ -7,7 +7,11 @@ periods.forEach((period) => {
   period.addEventListener("click", async (event) => {
     // Verifica se o elemento clicado é um botão de cancelamento
     if (event.target.classList.contains("delete-schedule")) {
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> a50a8632ef88a03606a1eeddc09694ef11a1fbc5
       const item = event.target.closest("li");
 
       // obtém o id do agendamento a partir do dataset do item clicado
@@ -17,7 +21,11 @@ periods.forEach((period) => {
         const isConfirm = confirm("Tem certeza que deseja cancelar este agendamento?");
 
         if (isConfirm) {
+<<<<<<< HEAD
           await scheduleCancel({ id });
+=======
+          await scheduleCancel({id});
+>>>>>>> a50a8632ef88a03606a1eeddc09694ef11a1fbc5
           schedulesDay();
         }
       }
