@@ -41,8 +41,12 @@ export function hoursLoad({ date, dailySchedules }) {
     // Cria o option para cada horário disponível
     const option = document.createElement("option");
     option.value = hour;
-    option.textContent = hour;
+    option.textContent = available ? hour : `${hour} - indisponível`;
     option.disabled = !available;
+
+    if (!available) {
+      option.classList.add("unavailable-hour");
+    }
 
     hourSelect.appendChild(option);
   });

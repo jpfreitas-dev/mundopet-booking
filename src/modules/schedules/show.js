@@ -1,4 +1,4 @@
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 
 const periodMorning = document.getElementById("period-morning");
 const periodAfternoon = document.getElementById("period-afternoon");
@@ -14,6 +14,7 @@ export function schedulesShow({ dailySchedules }) {
       // Card
       const card = document.createElement("li");
       card.classList.add("schedule-card");
+      card.dataset.id = schedule.id;
 
       const info = document.createElement("div");
       info.classList.add("schedule-info");
@@ -27,14 +28,18 @@ export function schedulesShow({ dailySchedules }) {
       const infoDiv = document.createElement("div");
       const service = document.createElement("p");
       service.classList.add("schedule-service");
-      service.textContent = schedule.service;
+      const fullService = schedule.service ?? "";
+      const hasLongService = fullService.length > 30;
+
+      service.textContent = hasLongService ? `${fullService.slice(0, 30)}...` : fullService;
+      service.title = fullService;
 
       // info > infoDiv + service
       info.append(infoDiv, service);
 
       const hour = document.createElement("span");
       hour.classList.add("schedule-hour")
-      hour.textContent = dayjs(schedule.when).format("HH-mm");
+      hour.textContent = dayjs(schedule.when).format("HH:mm");
 
       const clients = document.createElement("div");
       clients.classList.add("schedule-clients");
@@ -48,7 +53,7 @@ export function schedulesShow({ dailySchedules }) {
 
       const tutor = document.createElement("p");
       tutor.classList.add("schedule-tutor");
-      tutor.textContent = `/ ${schedule.tutorName}`;  ;
+      tutor.textContent = `/ ${schedule.tutorName}`;
 
       // clients > pet + tutor
       clients.append(pet, tutor);
