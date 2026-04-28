@@ -6,7 +6,6 @@ const hourSelect = document.getElementById("hour");
 
 export function hoursLoad({ date, dailySchedules }) {
   hourSelect.innerHTML = '';
-  console.log("hugada");
   
 
   const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when).format("HH:mm"));
@@ -47,9 +46,6 @@ export function hoursLoad({ date, dailySchedules }) {
 
     hourSelect.appendChild(option);
   });
-
-  console.log(hourSelect);
-  
 }
 
 

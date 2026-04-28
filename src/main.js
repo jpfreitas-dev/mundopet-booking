@@ -11,8 +11,9 @@ import './styles/new-schedule.css';
 import './styles/schedules.css';
 
 // JS
-import './modules/form/modal.js';
 import './modules/form/data-change.js';
+import './modules/form/modal.js';
+import './modules/form/submit.js';
 
 import './modules/schedules/load.js';
 
