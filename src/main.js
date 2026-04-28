@@ -15,8 +15,6 @@ import './modules/form/data-change.js';
 import './modules/form/modal.js';
 import './modules/form/submit.js';
 import './modules/schedules/cancel.js';
-
-import './modules/schedules/cancel.js';
 import './modules/schedules/load.js';
 
 import './modules/page-load.js';
