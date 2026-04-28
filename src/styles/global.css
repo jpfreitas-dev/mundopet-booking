@@ -60,7 +60,11 @@ body {
   padding-bottom: 2.5rem;
 }
 
-button, a, input, select, textarea {
+button,
+a,
+input,
+select,
+textarea {
   font: inherit;
   color: inherit;
   background: none;
@@ -69,6 +73,7 @@ button, a, input, select, textarea {
   cursor: pointer;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }

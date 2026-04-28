@@ -9,11 +9,14 @@ dateInput.value = dayjs(new Date()).format("YYYY-MM-DD");
 
 export async function schedulesDay() {
   const date = dateInput.value;
+  const formDateInput = document.getElementById("form-date");
+  const formDate = formDateInput?.value || date;
 
   const dailySchedules = await schedulesFetchByDay(date);
+  const formDailySchedules = await schedulesFetchByDay(formDate);
 
   schedulesShow({ dailySchedules });
-  hoursLoad({ date, dailySchedules });
+  hoursLoad({ date: formDate, dailySchedules: formDailySchedules });
 }
 
 

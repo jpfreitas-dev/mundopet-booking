@@ -97,7 +97,7 @@
           flex-direction: column;
           gap: .5rem;
           padding: 1rem 0.75rem;
-          
+
           &:not(:only-child) {
             border-bottom: 1px solid var(--border-divisor);
           }
@@ -167,7 +167,7 @@
             justify-content: space-between;
 
             & button.delete-schedule {
-             align-self: first baseline;
+              align-self: first baseline;
             }
           }
         }
