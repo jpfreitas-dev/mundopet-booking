@@ -12,5 +12,7 @@ import './styles/schedules.css';
 
 // JS
 import './modules/form/modal.js';
+import './modules/schedules/load.js';
+import './modules/page-load.js';
 
 

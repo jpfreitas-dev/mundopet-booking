@@ -2,13 +2,13 @@ import dayjs, { Dayjs } from "dayjs";
 
 const periodMorning = document.getElementById("period-morning");
 const periodAfternoon = document.getElementById("period-afternoon");
-const periodEvening = document.getElementById("period-evening");
+const periodNight = document.getElementById("period-night");
 
 export function schedulesShow({ dailySchedules }) {
   try {
     periodMorning.innerHTML = "";
     periodAfternoon.innerHTML = "";
-    periodEvening.innerHTML = "";
+    periodNight.innerHTML = "";
 
     dailySchedules.forEach((schedule) => {
       // Card
@@ -60,7 +60,7 @@ export function schedulesShow({ dailySchedules }) {
       } else if (scheduleHour <= 18) {
         periodAfternoon.append(card);
       } else {
-        periodEvening.append(card);
+        periodNight.append(card);
       }
     });
   } catch (error) {

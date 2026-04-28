@@ -29,7 +29,8 @@
       </div>
       <div class="today-date">
         <img src="./src/assets/calendar.svg" alt="Ícone de calendário">
-        <input type="date">
+        <input type="date" id="date">
+
         <img class="date-arrow" src="./src/assets/arrow-down.svg" alt="">
       </div>
     </header>
@@ -133,7 +134,7 @@
 
   <button id="new-schedule">Novo agendamento</button>
 
-  <div id="modal-overlay" class="modal-overlay">
+  <div id="modal-overlay" class="modal-overlay" style="opacity:0;pointer-events:none;">
 
     <div class="modal-content" role="dialog" aria-labelledby="modal-title">
 
@@ -176,10 +177,10 @@
 
         <div class="form-row">
           <div class="input-group">
-            <label for="date">Data</label>
+            <label for="form-date">Data</label>
             <div class="field-control select-control">
               <img src="./src/assets/calendar.svg" alt="">
-              <input type="date" id="date" required>
+              <input type="date" id="form-date" required>
               <img class="date-arrow" src="./src/assets/arrow-down.svg" alt="">
             </div>
           </div>
@@ -188,20 +189,6 @@
             <div class="field-control select-control">
               <img src="./src/assets/clock.svg" alt="">
               <select id="hour" required>
-                <option value="" selected disabled>Selecione o horario</option>
-                <option value="09:00">09:00</option>
-                <option value="10:00">10:00</option>
-                <option value="11:00">11:00</option>
-                <option value="12:00">12:00</option>
-                <option value="13:00">13:00</option>
-                <option value="14:00">14:00</option>
-                <option value="15:00">15:00</option>
-                <option value="16:00">16:00</option>
-                <option value="17:00">17:00</option>
-                <option value="18:00">18:00</option>
-                <option value="19:00">19:00</option>
-                <option value="20:00">20:00</option>
-                <option value="21:00">21:00</option>
               </select>
               <img class="date-arrow" src="./src/assets/arrow-down.svg" alt="">
             </div>
